@@ -1,0 +1,64 @@
+{
+  "name": "react-vidle",
+  "version": "0.1.0",
+  "description": "Video timestamp library powered by Video.js and React",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --require test/setup/helpers.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zouhir/react-vidle.git"
+  },
+  "keywords": [
+    "react",
+    "video.js",
+    "video",
+    "timestamp",
+    "media",
+    "blogging"
+  ],
+  "author": "Zouhir Chahoud",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zouhir/react-vidle/issues"
+  },
+  "homepage": "https://github.com/zouhir/react-vidle#readme",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.14.0",
+    "babel-eslint": "^6.1.2",
+    "babel-loader": "^6.2.5",
+    "babel-polyfill": "^6.13.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-register": "^6.14.0",
+    "chai": "^3.5.0",
+    "enzyme": "^2.4.1",
+    "eslint": "^3.5.0",
+    "eslint-config-standard": "^6.0.1",
+    "eslint-config-standard-jsx": "^3.0.1",
+    "eslint-config-standard-react": "^4.0.2",
+    "eslint-plugin-promise": "^2.0.1",
+    "eslint-plugin-react": "^6.2.2",
+    "eslint-plugin-standard": "^2.0.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "jsdom": "^9.5.0",
+    "json-loader": "^0.5.4",
+    "mocha": "^3.0.2",
+    "node-sass": "^3.10.1",
+    "npm": "^3.10.8",
+    "path": "^0.12.7",
+    "postcss-loader": "^0.13.0",
+    "react-addons-test-utils": "^15.3.1",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.15.2"
+  },
+  "dependencies": {
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1",
+    "video.js": "^5.11.7"
+  }
+}
