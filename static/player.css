@@ -25,6 +25,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+  padding: 30px;
 }
 ol, ul {
 	list-style: none;
@@ -52,20 +53,115 @@ video {
   box-sizing: border-box;
   font-size: 0;
   font-family: 'Open Sans', sans-serif;
+  overflow: hidden;
+  border-radius: 6px;
+  z-index: 99999;
 }
 .controls {
   width: 100%;
   position: absolute;
-  overflow: hidden;
-  bottom: 0
+  overflow: visible;
+  bottom: 0;
 }
 
 .controls .row{
   width: 100%;
-  display: block;
-  overflow: hidden;
+  float: left;
 }
-.controls i{
-  padding: 5px;
+
+.controls .row.transparent {
+  background: linear-gradient(to top, rgba(0,0,0,0.4) ,  rgba(0, 0, 0, 0.2),  rgba(0, 0, 0, 0.08), rgba(255, 255, 255, 0) );
+}
+
+.controls .row::before{
+  content: "";
   display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+.controls .row i{
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+  padding: 5px 5px 10px 5px;
+  position: relative;
+}
+
+.controls .row i:first-child{
+  padding-left: 20px !important;
+}
+
+.controls .row i:last-child{
+  padding-right: 20px !important;
+}
+
+.controls-left {
+  float: left;
+}
+
+.controls-right {
+  float: right;
+}
+
+.square-select {
+  background: #F2CD30;
+  background: linear-gradient(#F2CD30, #ECB129);
+  color: #272727;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 0px;
+  text-align: center;
+  width: 40px;
+  border-radius: 3px;
+}
+
+.select{
+  position: absolute;
+  display: block;
+  bottom: 32px;
+  width: 40px;
+}
+
+.select li{
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 0px;
+  text-align: center;
+  border-radius: 3px;
+  margin-bottom: 6px;
+  float: left;
+  background:rgba(39, 39, 39, 0.7);
+  color: #FFF;
+  width: 100%;
+}
+
+.select li:hover {
+  background:rgba(39, 39, 39, 0.9);
+  color: #F2CD30;
+}
+
+.progress-bar{
+  height: 10px;
+  width: 100%;
+  position: relative;
+  display: block;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.progress-bar span {
+  text-indent: -9999px;
+  position: absolute;
+  height: 10px;
+}
+
+.progress-bar .buffer{
+  background: rgba(255,255,255,0.2);
+  width: 80%;
+  z-index: 1;
+}
+
+.progress-bar .progress{
+  background: #ffcd00;
+  width: 40%;
+  z-index: 10;
 }

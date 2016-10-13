@@ -21486,9 +21486,9 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _play = __webpack_require__(173);
+	var _Controls = __webpack_require__(177);
 
-	var _play2 = _interopRequireDefault(_play);
+	var _Controls2 = _interopRequireDefault(_Controls);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -21505,16 +21505,7 @@
 	        null,
 	        _react2.default.createElement('source', { src: 'https://www.paypalobjects.com/webstatic/mktg/videos/PayPal_AustinSMB_baseline.mp4', type: 'video/mp4' })
 	      ),
-	      _react2.default.createElement(
-	        'div',
-	        { className: 'controls' },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'row' },
-	          _react2.default.createElement(_play2.default, { playing: true })
-	        ),
-	        _react2.default.createElement('div', { className: 'row' })
-	      )
+	      _react2.default.createElement(_Controls2.default, null)
 	    );
 	  }
 	});
@@ -21551,7 +21542,7 @@
 	    if (this.props.playing === false) {
 	      return _react2.default.createElement(
 	        'i',
-	        null,
+	        { className: this.props.direction },
 	        _react2.default.createElement(
 	          'svg',
 	          { fill: '#FFFFFF', height: this.props.height, viewBox: '0 0 24 24', width: this.props.width, xmlns: 'http://www.w3.org/2000/svg' },
@@ -21562,7 +21553,7 @@
 	    } else {
 	      return _react2.default.createElement(
 	        'i',
-	        null,
+	        { className: this.props.direction },
 	        _react2.default.createElement(
 	          'svg',
 	          { fill: '#FFFFFF', height: this.props.height, viewBox: '0 0 24 24', width: this.props.width, xmlns: 'http://www.w3.org/2000/svg' },
@@ -21574,6 +21565,273 @@
 	  }
 	}); // Play Control Icon
 	exports.default = IconPlay;
+
+/***/ },
+/* 174 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var IconReplay = _react2.default.createClass({
+	  displayName: 'IconReplay',
+	  getDefaultProps: function getDefaultProps() {
+	    return {
+	      width: 28,
+	      height: 28,
+	      seconds: 8
+	    };
+	  },
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'i',
+	      { className: this.props.direction },
+	      _react2.default.createElement(
+	        'svg',
+	        { fill: '#FFFFFF', height: this.props.height, viewBox: '0 0 24 24', width: this.props.width, xmlns: 'http://www.w3.org/2000/svg' },
+	        _react2.default.createElement('path', { d: 'M0 0h24v24H0z', fill: 'none' }),
+	        _react2.default.createElement('path', { d: 'M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z' })
+	      )
+	    );
+	  }
+	}); // Play Control Icon
+	exports.default = IconReplay;
+
+/***/ },
+/* 175 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var IconSpeed = _react2.default.createClass({
+	  displayName: 'IconSpeed',
+	  getDefaultProps: function getDefaultProps() {
+	    return {
+	      width: 32,
+	      height: 32,
+	      speed: 1
+	    };
+	  },
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'i',
+	      null,
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'square-select' },
+	        this.props.speed,
+	        'X'
+	      ),
+	      _react2.default.createElement(
+	        'ul',
+	        { className: 'select' },
+	        _react2.default.createElement(
+	          'li',
+	          null,
+	          '1.5X'
+	        ),
+	        _react2.default.createElement(
+	          'li',
+	          null,
+	          '2X'
+	        ),
+	        _react2.default.createElement(
+	          'li',
+	          null,
+	          '3X'
+	        )
+	      )
+	    );
+	  }
+	}); // Play Control Icon
+	exports.default = IconSpeed;
+
+/***/ },
+/* 176 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var FullScreen = _react2.default.createClass({
+	  displayName: 'FullScreen',
+	  getDefaultProps: function getDefaultProps() {
+	    return {
+	      width: 32,
+	      height: 32,
+	      active: false
+	    };
+	  },
+	  render: function render() {
+	    if (this.props.active === false) {
+	      return _react2.default.createElement(
+	        'i',
+	        { className: this.props.direction },
+	        _react2.default.createElement(
+	          'svg',
+	          { fill: '#FFFFFF', height: this.props.height, viewBox: '0 0 24 24', width: this.props.width, xmlns: 'http://www.w3.org/2000/svg' },
+	          _react2.default.createElement('path', { d: 'M0 0h24v24H0z', fill: 'none' }),
+	          _react2.default.createElement('path', { d: 'M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z' })
+	        )
+	      );
+	    } else {
+	      return _react2.default.createElement(
+	        'i',
+	        { className: this.props.direction },
+	        _react2.default.createElement(
+	          'svg',
+	          { fill: '#FFFFFF', height: this.props.height, viewBox: '0 0 24 24', width: this.props.width, xmlns: 'http://www.w3.org/2000/svg' },
+	          _react2.default.createElement('path', { d: 'M0 0h24v24H0z', fill: 'none' }),
+	          _react2.default.createElement('path', { d: 'M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z' })
+	        )
+	      );
+	    }
+	  }
+	}); // Play Control Icon
+	exports.default = FullScreen;
+
+/***/ },
+/* 177 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Play = __webpack_require__(173);
+
+	var _Play2 = _interopRequireDefault(_Play);
+
+	var _Replay = __webpack_require__(174);
+
+	var _Replay2 = _interopRequireDefault(_Replay);
+
+	var _PlaySpeed = __webpack_require__(175);
+
+	var _PlaySpeed2 = _interopRequireDefault(_PlaySpeed);
+
+	var _FullScreen = __webpack_require__(176);
+
+	var _FullScreen2 = _interopRequireDefault(_FullScreen);
+
+	var _Progress = __webpack_require__(178);
+
+	var _Progress2 = _interopRequireDefault(_Progress);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	// Play Control Icon
+	var Controls = _react2.default.createClass({
+	  displayName: 'Controls',
+	  getDefaultProps: function getDefaultProps() {
+	    return {
+	      width: 32,
+	      height: 32,
+	      playing: false
+	    };
+	  },
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      { className: 'controls' },
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'row transparent' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'controls-left' },
+	          _react2.default.createElement(_Play2.default, { playing: true }),
+	          _react2.default.createElement(_Replay2.default, null)
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'controls-right' },
+	          _react2.default.createElement(_PlaySpeed2.default, null),
+	          _react2.default.createElement(_FullScreen2.default, null)
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'row' },
+	        _react2.default.createElement(_Progress2.default, null)
+	      )
+	    );
+	  }
+	});
+
+	// ours
+	exports.default = Controls;
+
+/***/ },
+/* 178 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Progress = _react2.default.createClass({
+	  displayName: 'Progress',
+	  getDefaultProps: function getDefaultProps() {
+	    return {
+	      width: 32,
+	      height: 32,
+	      current: 22,
+	      buffer: 44
+	    };
+	  },
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      { className: 'progress-bar' },
+	      _react2.default.createElement('span', { className: 'buffer' }),
+	      _react2.default.createElement('span', { className: 'progress' })
+	    );
+	  }
+	}); // Play Control Icon
+	exports.default = Progress;
 
 /***/ }
 /******/ ]);

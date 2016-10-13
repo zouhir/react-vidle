@@ -2,7 +2,7 @@
 import React from 'react'
 
 // ours
-import IconPlay from './controls/play'
+import Controls from './controls/Controls'
 
 const Vidle = React.createClass({
   componentDidMount () {
@@ -14,13 +14,7 @@ const Vidle = React.createClass({
         <video>
           <source src='https://www.paypalobjects.com/webstatic/mktg/videos/PayPal_AustinSMB_baseline.mp4' type='video/mp4' />
         </video>
-        <div className='controls'>
-          <div className='row'>
-            <IconPlay playing={true} />
-          </div>
-          <div className='row'>
-          </div>
-        </div>
+        <Controls />
       </div>
     )
   }
